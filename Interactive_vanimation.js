@@ -46,3 +46,15 @@ function frame() {
         dots[i].render();
     }
 }
+
+//change the BG color by clicking it
+container.addEventListener("click", changeBG)
+
+function changeBG() {
+  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  container.style.backgroundColor = rndCol;
+}
+
+function random(num) {
+    return Math.floor(Math.random()*(num+1));
+}
